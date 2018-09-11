@@ -5,7 +5,12 @@
     <meta name="description" content=""/>
     <meta name="keywords" content="" />
     <meta name="application-name" content="" />
-
+ <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+  
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Force IE9 to render in normla mode -->

@@ -216,58 +216,23 @@ $(document).ready(function(){
 	$("#resetpwd").click(function(){
 		$("#login-modal").modal('show');
 	});
-});
-            $('.login-form').submit(function (e) {
-                e.preventDefault();
-				
-                $(this).parsley().validate();
-                if ($(this).parsley().isValid()) {
-                    
-                    $.ajax({
-                        url: "resetpwd_process.php",
-                        type: "POST",
-                        data: $('.login-form').serialize(),
-                        success: function (response) {
-                            if (response == 1) {
-								toastr.success('Password Reset!', 'Career First IAS Academy!');
-								setTimeout(function() {
-									location.reload();
-								}, 1000);
-                            } else{
-								toastr.error('Opps Please Try Again!', 'Career First IAS Academy!');
-                            }
-                        },
-					});
-                }
-            });
-</script>
-	    
-     <script type="text/javascript" >
-	   $("#loginForm").submit(function(e) {
-		 e.preventDefault();
-		
-		$.ajax({
-			url: "login.php",
-			type: "post",
-			data: $("#loginForm").serialize() ,
-			success: function (response) {
-				console.log(response);
-				
-				if(response==1){
-					window.location = "dashboard.php";
-				}	
-				else{
-					toastr.error('Opps! Incorrect Credentials!', 'Career First!');
-				}
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-			   console.log(textStatus, errorThrown);
-			}
-		});
-	});
 
-        $(document).ready(function() {
           
+$("#loginBtn").click(function() {
+var username = $("#username").val();
+var password = $("#password").val();
+
+$.post("login.php", {
+username: name,
+password: password
+}, function(data) {
+if (data == 'You have Successfully Registered.....') {
+$("form")[0].reset();
+}
+alert(data);
+});
+}
+
             var supr_Options = {
                 rtl:false
             }

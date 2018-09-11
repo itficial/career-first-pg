@@ -1,5 +1,5 @@
 <?php
-include("connect.php");
+include("include/include/connect.php");
 
 $escapedName = mysqli_real_escape_string($link,$_POST['username']);
 $escapedPW = mysqli_real_escape_string($link,$_POST['password']);

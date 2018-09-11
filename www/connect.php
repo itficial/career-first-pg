@@ -1,11 +1,11 @@
 <?php
-$link=mysqli_connect("localhost","itficlgm_loop","ITF@@204","itficlgm_cfirst");
+$link=mysqli_connect("http://103.211.216.28:3306","itficlgm_loop","ITF@@204","itficlgm_cfirst");
 
 
 //$link=mysqli_connect("localhost","root","","itficlgm_cfirst");
 // Check connection
 
-$web="http://www.career-first.in/admin-first/";
+//$web="http://www.career-first.in/admin-first/";
 
 if (mysqli_connect_errno())
   {
